@@ -1,6 +1,6 @@
 import Repo from "./Repo";
 export default function RepoList(props){
-    console.log(props.repoList);
+    // console.log(props.repoList);
     let reposlist = props.repoList;
     return(
         <div>

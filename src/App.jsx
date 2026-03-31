@@ -10,7 +10,11 @@ function App() {
   function fetchRepoList(repoText){
     fetch(`https://api.github.com/users/${repoText}/repos`).
     then(response=>response.json()).
-    then((data)=>setRepoList(data)).catch((error)=>console.log("error:",error));
+    then((data)=>{
+      setRepoList(data);
+      console.log(repoList);
+    }).
+    catch((error)=>console.log("error:",error));
   }
   function handleOnSearch(searchText){
         // console.log("start searching....")
